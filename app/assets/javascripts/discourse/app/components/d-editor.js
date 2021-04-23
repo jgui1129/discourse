@@ -422,6 +422,7 @@ export default Component.extend({
         );
 
         loadScript("/javascripts/diffhtml.min.js").then(() => {
+          window.diff.release(this.element.querySelector(".d-editor-preview"));
           window.diff.innerHTML(
             this.element.querySelector(".d-editor-preview"),
             cookedElement.innerHTML,
